@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3486238054078363786}
   - component: {fileID: 3486238054078363781}
   - component: {fileID: 3486238054078363780}
-  - component: {fileID: 2628663643402326729}
   m_Layer: 9
   m_Name: PlayerShip
   m_TagString: Player
@@ -114,19 +113,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.9081225, y: 3.265171, z: 10}
   m_Center: {x: 0.19125724, y: -0.59155846, z: -0.5830927}
---- !u!114 &2628663643402326729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3486238054078363784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7e0458a0c534fb428917ecb9ced2d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1000
 --- !u!1 &3486238055011240463
 GameObject:
   m_ObjectHideFlags: 0

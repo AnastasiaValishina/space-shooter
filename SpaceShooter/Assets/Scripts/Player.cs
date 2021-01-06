@@ -102,8 +102,10 @@ public class Player : MonoBehaviour
         damageDealer.Hit();
         if (health <= 0)
         {
+            health = 0;
             Destroy(gameObject);
             Instantiate(playerExplosion, transform.position, Quaternion.identity);
+            FindObjectOfType<SceneLoader>().LoadGameOver();
         }
     }
 }
