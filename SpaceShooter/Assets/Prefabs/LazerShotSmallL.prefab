@@ -14277,7 +14277,7 @@ GameObject:
   - component: {fileID: 8980061590913371144}
   m_Layer: 10
   m_Name: LazerShotSmallL
-  m_TagString: PlayerLazer
+  m_TagString: Lazer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
