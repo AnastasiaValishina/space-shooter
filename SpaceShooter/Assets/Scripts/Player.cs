@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] float health = 100f;
+    [SerializeField] int health = 100;
     [SerializeField] GameObject lazerShot;
     [SerializeField] GameObject lazerGun;
     [SerializeField] GameObject lazerShotSmallL;
@@ -108,4 +108,6 @@ public class Player : MonoBehaviour
             FindObjectOfType<SceneLoader>().LoadGameOver();
         }
     }
+
+    public int GetHealth() { return health; }
 }

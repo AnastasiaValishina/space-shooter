@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Asteroid : MonoBehaviour
 {
-    [SerializeField] float health = 100f;
+    [SerializeField] int health = 100;
     [SerializeField] GameObject asteroidExplosion;
     [SerializeField] float rotation;
     [SerializeField] float minSpeed, maxSpeed;
