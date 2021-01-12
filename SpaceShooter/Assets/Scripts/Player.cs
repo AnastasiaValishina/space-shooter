@@ -1,10 +1,14 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] int health = 100;
+    [Header("Player")]
+    [SerializeField] int health = 1000;
+    [SerializeField] GameObject playerExplosion;
+
+    [Header("Shooting")]
+    [SerializeField] float timeBetweenShots;
     [SerializeField] GameObject lazerShot;
     [SerializeField] GameObject lazerGun;
     [SerializeField] GameObject lazerShotSmallL;
@@ -12,12 +16,10 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject lazerGunRight;
     [SerializeField] GameObject lazerGunLeft;
 
-
+    [Header("Movement")]
     [SerializeField] float speed;
     [SerializeField] float tilt;
     [SerializeField] float xMin, xMax, zMin, zMax;
-    [SerializeField] float timeBetweenShots;
-    [SerializeField] GameObject playerExplosion;
 
     Rigidbody ship;
     float deltaX, deltaZ;
@@ -26,17 +28,17 @@ public class Player : MonoBehaviour
     {
         ship = GetComponent<Rigidbody>();
         InvokeRepeating("Shoot", 1f, timeBetweenShots);
-        InvokeRepeating("ShootSmallGuns", 1f, 0.5f);
+        InvokeRepeating("ShootSmallGuns", 1f, timeBetweenShots / 2);
     }
 
     void Update()
     {
-        MouseControl();
+        MoveControl();
         TouchControl();
     }
 
 
-    void MouseControl()
+    void MoveControl()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
