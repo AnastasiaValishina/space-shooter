@@ -133,6 +133,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerShip
       objectReference: {fileID: 0}
+    - target: {fileID: 3486238054078363784, guid: 317cd00c72c10eb45afaba292b506cff,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3486238054078363785, guid: 317cd00c72c10eb45afaba292b506cff,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -656,7 +661,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 200, y: 100, z: 200}
+  m_Size: {x: 160, y: 100, z: 180}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1106232642
 Transform:
@@ -717,7 +722,7 @@ PrefabInstance:
     - target: {fileID: 4597858871750169681, guid: 70668b3c9268532409eb08bbf2503f62,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4597858871750169681, guid: 70668b3c9268532409eb08bbf2503f62,
         type: 3}
@@ -875,6 +880,10 @@ MonoBehaviour:
   enemy: {fileID: 643179705126308753, guid: 977d1dd918ddc4347b089ca843d8e09f, type: 3}
   minDelayEnemy: 1
   maxDelayEnemy: 4
+  waveConfigs:
+  - {fileID: 11400000, guid: 7974441c6fa310d448ce65338de78309, type: 2}
+  - {fileID: 11400000, guid: c687443d930cc544a8195fe76377a2fc, type: 2}
+  looping: 1
 --- !u!23 &1513948392
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -934,7 +943,7 @@ Transform:
   m_LocalScale: {x: 62, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1567565611
 GameObject:

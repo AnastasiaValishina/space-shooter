@@ -12,8 +12,11 @@ GameObject:
   - component: {fileID: 643179705126308762}
   - component: {fileID: 259563288}
   - component: {fileID: 5433120585547516019}
+  - component: {fileID: 5419872622250460232}
+  - component: {fileID: 6761509991940936442}
+  - component: {fileID: 6728317068254441501}
   m_Layer: 8
-  m_Name: EnemyShip 1
+  m_Name: EnemyShipPurple
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +46,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643179705126308753}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8079cb4adf082c49a2a8b5762b3227d, type: 3}
   m_Name: 
@@ -84,7 +87,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7e0458a0c534fb428917ecb9ced2d94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 200
+  damage: 400
+--- !u!114 &5419872622250460232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643179705126308753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43b298d62262be04b850d778f463a804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &6761509991940936442
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643179705126308753}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2, y: 1.2, z: 8.8}
+  m_Center: {x: -0, y: 0, z: -0.38}
+--- !u!65 &6728317068254441501
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643179705126308753}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 0.4, z: 1.6}
+  m_Center: {x: 0, y: 0, z: -1.4}
 --- !u!1 &7928331850439234134
 GameObject:
   m_ObjectHideFlags: 0

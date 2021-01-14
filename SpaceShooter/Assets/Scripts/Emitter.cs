@@ -4,16 +4,51 @@ using UnityEngine;
 
 public class Emitter : MonoBehaviour
 {
-    public GameObject[] asteroids;
-    public float minDelayAst, maxDelayAst;
+    [Header("Asteroids")]
+    [SerializeField] GameObject[] asteroids;
+    [SerializeField] float minDelayAst, maxDelayAst;
+    float nextLaunchTimeAst;
+    int randomAsteriod;
 
-    public GameObject enemy;
-    public float minDelayEnemy, maxDelayEnemy;
+    [Header("Enemy")]
+    [SerializeField] GameObject enemy;
+    [SerializeField] float minDelayEnemy, maxDelayEnemy;
+    float nextLaunchTimeEnemy;
 
-    private float nextLaunchTimeAst;
-    private int randomAsteriod;
+    [Header("Enemy Pathing")]
+    [SerializeField] List<WaveConfig> waveConfigs;
+    [SerializeField] bool looping = false;
 
-    private float nextLaunchTimeEnemy;
+    private IEnumerator Start()
+    {
+        do
+        {
+            yield return StartCoroutine(SpawnAllWaves());
+        }
+        while (looping);
+    }
+
+    private IEnumerator SpawnAllWaves()
+    {
+        for (int waveIndex = 0; waveIndex < waveConfigs.Count; waveIndex++)
+        {
+            var currentWave = waveConfigs[waveIndex];
+            yield return StartCoroutine(SpawnAllEnemiesInWave(currentWave));
+        }
+    }
+
+    private IEnumerator SpawnAllEnemiesInWave(WaveConfig waveConfig)
+    {
+        for (int enemyCount = 0; enemyCount < waveConfig.GetNumberOfEnemies(); enemyCount++)
+        {
+            var newEnemy = Instantiate(
+                waveConfig.GetEnemyPrefab(), 
+                waveConfig.GetWaypoints()[0].transform.position,
+                Quaternion.Euler(0f, 180f, 0f));
+            newEnemy.GetComponent<EnemyPathing>().SetWaveConfig(waveConfig);
+            yield return new WaitForSeconds(waveConfig.GetTimeBetweenSpawns());
+        }
+    }
 
     void Update()
     {
