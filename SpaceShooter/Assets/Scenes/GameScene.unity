@@ -136,7 +136,7 @@ PrefabInstance:
     - target: {fileID: 3486238054078363784, guid: 317cd00c72c10eb45afaba292b506cff,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3486238054078363785, guid: 317cd00c72c10eb45afaba292b506cff,
         type: 3}
@@ -882,7 +882,10 @@ MonoBehaviour:
   maxDelayEnemy: 4
   waveConfigs:
   - {fileID: 11400000, guid: 7974441c6fa310d448ce65338de78309, type: 2}
+  - {fileID: 11400000, guid: ca69b3a24a08a9e45952920e36445ba2, type: 2}
   - {fileID: 11400000, guid: c687443d930cc544a8195fe76377a2fc, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   looping: 1
 --- !u!23 &1513948392
 MeshRenderer:
