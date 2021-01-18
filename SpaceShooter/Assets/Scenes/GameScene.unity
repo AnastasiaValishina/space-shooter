@@ -877,15 +877,13 @@ MonoBehaviour:
   - {fileID: 595546138477433669, guid: f82d1f4ada916d146ab254a16830961a, type: 3}
   minDelayAst: 2
   maxDelayAst: 5
-  enemy: {fileID: 643179705126308753, guid: 977d1dd918ddc4347b089ca843d8e09f, type: 3}
-  minDelayEnemy: 1
-  maxDelayEnemy: 4
   waveConfigs:
   - {fileID: 11400000, guid: 7974441c6fa310d448ce65338de78309, type: 2}
   - {fileID: 11400000, guid: ca69b3a24a08a9e45952920e36445ba2, type: 2}
+  - {fileID: 11400000, guid: 4a6a4304787144e428ee217241ce5d79, type: 2}
   - {fileID: 11400000, guid: c687443d930cc544a8195fe76377a2fc, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 9607ad64e43ac8b41a8dad3b94f80da5, type: 2}
+  - {fileID: 11400000, guid: d434cf6ceb788aa4584f6d9015ea7902, type: 2}
   looping: 1
 --- !u!23 &1513948392
 MeshRenderer:
@@ -1314,6 +1312,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MusicPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624785426630800689, guid: b934816328ba6a148b82d5e4dc8267e1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b934816328ba6a148b82d5e4dc8267e1, type: 3}

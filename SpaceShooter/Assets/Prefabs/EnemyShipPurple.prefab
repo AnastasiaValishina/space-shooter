@@ -46,7 +46,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643179705126308753}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8079cb4adf082c49a2a8b5762b3227d, type: 3}
   m_Name: 
@@ -56,7 +56,7 @@ MonoBehaviour:
   lazerShot: {fileID: 5037446796348245271, guid: 76e96cd184795244ea973a50d028d28e,
     type: 3}
   lazerGun: {fileID: 7928331850439234134}
-  timeBetweenShots: 3
+  timeBetweenShots: 2
   enemyExplosion: {fileID: 8386965671803130392, guid: f4300e494cf4e144c88f6119caab9fb2,
     type: 3}
 --- !u!54 &259563288

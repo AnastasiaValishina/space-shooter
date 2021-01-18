@@ -12,10 +12,11 @@ GameObject:
   - component: {fileID: 643179705126308762}
   - component: {fileID: 259563288}
   - component: {fileID: 5433120585547516019}
+  - component: {fileID: 3616821702440210121}
   - component: {fileID: 6653605099454049851}
   - component: {fileID: 1197390929767990402}
   m_Layer: 8
-  m_Name: EnemyShip
+  m_Name: EnemyShipGray
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,7 +56,7 @@ MonoBehaviour:
   lazerShot: {fileID: 5037446796348245271, guid: 76e96cd184795244ea973a50d028d28e,
     type: 3}
   lazerGun: {fileID: 7928331850439234134}
-  timeBetweenShots: 3
+  timeBetweenShots: 2.5
   enemyExplosion: {fileID: 8386965671803130392, guid: f4300e494cf4e144c88f6119caab9fb2,
     type: 3}
 --- !u!54 &259563288
@@ -87,6 +88,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 200
+--- !u!114 &3616821702440210121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643179705126308753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43b298d62262be04b850d778f463a804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &6653605099454049851
 BoxCollider:
   m_ObjectHideFlags: 0

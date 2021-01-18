@@ -10,12 +10,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject lazerShot;
     [SerializeField] GameObject lazerGun;
     [SerializeField] float timeBetweenShots;
-
     [SerializeField] GameObject enemyExplosion;
 
     void Start()
     {
-        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, -speed);
         InvokeRepeating("Shoot", 1f, timeBetweenShots);
     }
 
