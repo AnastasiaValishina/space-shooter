@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("Shoot", 1f, timeBetweenShots);
+        InvokeRepeating("Shoot", UnityEngine.Random.Range(0.1f, 1f), timeBetweenShots);
     }
 
     void Shoot()
