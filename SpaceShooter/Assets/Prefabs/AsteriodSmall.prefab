@@ -64,6 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  scoreValue: 5
   asteroidExplosion: {fileID: 8386965671803130392, guid: f4300e494cf4e144c88f6119caab9fb2,
     type: 3}
   rotation: 8

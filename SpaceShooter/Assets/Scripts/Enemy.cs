@@ -5,8 +5,12 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("Enemy Stats")]
     [SerializeField] int health = 100;
+    [SerializeField] int scoreValue = 1;
     [SerializeField] float speed;
+
+    [Header("Shooting")]
     [SerializeField] GameObject lazerShot;
     [SerializeField] GameObject lazerGun;
     [SerializeField] float timeBetweenShots;
@@ -33,6 +37,7 @@ public class Enemy : MonoBehaviour
     {
         health -= damageDealer.GetDamage();
         damageDealer.Hit();
+        FindObjectOfType<GameSession>().AddToScore(scoreValue);
         if (health <= 0)
         {
             Destroy(gameObject);

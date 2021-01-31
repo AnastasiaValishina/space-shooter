@@ -6,6 +6,7 @@ using UnityEngine;
 public class Asteroid : MonoBehaviour
 {
     [SerializeField] int health = 100;
+    [SerializeField] int scoreValue = 1;
     [SerializeField] GameObject asteroidExplosion;
     [SerializeField] float rotation;
     [SerializeField] float minSpeed, maxSpeed;
@@ -29,6 +30,7 @@ public class Asteroid : MonoBehaviour
     {
         health -= damageDealer.GetDamage();
         damageDealer.Hit();
+        FindObjectOfType<GameSession>().AddToScore(scoreValue);
         if (health <= 0)
         {
             Destroy(gameObject);

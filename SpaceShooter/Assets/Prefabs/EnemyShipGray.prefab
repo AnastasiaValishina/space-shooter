@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  scoreValue: 10
   speed: 10
   lazerShot: {fileID: 5037446796348245271, guid: 76e96cd184795244ea973a50d028d28e,
     type: 3}
