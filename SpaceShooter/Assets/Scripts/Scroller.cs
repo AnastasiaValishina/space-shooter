@@ -1,19 +1,21 @@
-﻿using System.Collections;
+﻿using Boo.Lang.Environments;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Scroller : MonoBehaviour
 {
-    public float speed;
-    Vector3 startPosition;
+    [SerializeField] float speed = 0.2f;
+    Material backgroundMaterial;
+    Vector2 offset;
     void Start()
     {
-        startPosition = transform.position;
+        backgroundMaterial = GetComponent<Renderer>().material;
+        offset = new Vector2(0f, -speed);
     }
 
     void Update()
     {
-        float shift = Mathf.Repeat(Time.time * speed, 150);
-        transform.position = startPosition + new Vector3(0, 0, -shift) ;
+        backgroundMaterial.mainTextureOffset += offset * Time.deltaTime;
     }
 }
