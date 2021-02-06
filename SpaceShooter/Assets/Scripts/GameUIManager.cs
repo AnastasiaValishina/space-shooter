@@ -8,9 +8,21 @@ public class GameUIManager : MonoBehaviour
     [SerializeField] Text healthText;
     [SerializeField] Text scoreText;
 
+    Player player;
+    GameSession gameSession;
+
+    private void Start()
+    {
+        player = FindObjectOfType<Player>();
+        gameSession = FindObjectOfType<GameSession>();
+    }
     void Update()
     {
-        healthText.text = FindObjectOfType<Player>().GetHealth().ToString();
-        scoreText.text = FindObjectOfType<GameSession>().GetScore().ToString();
+        if (player)
+        {
+            healthText.text = player.GetHealth().ToString();
+        }
+
+        scoreText.text = gameSession.GetScore().ToString();
     }
 }
